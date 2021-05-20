@@ -1,0 +1,314 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+@model Flomak.com.tr.ViewModels.HomeViewModel
+
+
+<main class="animsition-overlay" data-animsition-overlay="true">
+    <!-- home-slider start -->
+    <section class="home-slider" id="up">
+        <!-- swiper-wrapper start -->
+        <div class="swiper-wrapper">
+
+
+            @foreach (var item in Model.Sliders)
+            {
+
+
+                <!-- swiper-slide start -->
+                <div class="swiper-slide flex-min-height-box home-slide">
+                    <!-- slide-bg -->
+                    <div class="slide-bg overlay-loading2 overlay-dark-bg-1" style="background-image: url(/images/team/@item.Image)"></div>
+                    <!-- home-slider-content start -->
+                    <div class="home-slider-content flex-min-height-inner dark-bg-1">
+                        <!-- flex-container start -->
+                        <div class="container top-bottom-padding-120 flex-container response-999">
+                            <!-- column start -->
+                            <div class="six-columns six-offset">
+                                <div class="content-left-margin-40">
+                                    <h2 class="large-title-bold">
+                                        <span class="slider-title-fill slider-tr-delay01" data-text="@item.Text1">@item.Text1</span><br>
+                                        <span class="slider-title-fill slider-tr-delay02" data-text="@item.Text2">@item.Text2</span><br>
+                                        <span class="slider-title-fill slider-tr-delay03" data-text="@item.Text3">@item.Text3</span>
+
+                                    </h2>
+                                    <p class="p-style-bold-up text-height-20 d-flex-wrap">
+                                        <span class="slider-title-fill slider-tr-delay06" data-text=">@item.Subtitle</span>
+                                    </p>
+                                    <div class="slider-fade slider-tr-delay07 top-margin-30">
+                                        <div class="border-btn-box border-btn-red pointer-large">
+                                            <div class="border-btn-inner">
+                                                @*<a href="#" class="border-btn" data-text="Read more"></a>*@
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- column end -->
+                        </div><!-- flex-container end -->
+                    </div><!-- home-slider-content end -->
+                }
+        </div>
+        <!-- swiper-slide end -->
+
+
+
+    </div><!-- swiper-wrapper end -->
+    <!-- swiper-button-next start -->
+    <div class="swiper-button-next">
+        <div class="slider-arrow-next-box">
+            <span class="slider-arrow-next"></span>
+        </div>
+    </div><!-- swiper-button-next end -->
+    <!-- swiper-button-prev start -->
+    <div class="swiper-button-prev">
+        <div class="slider-arrow-prev-box">
+            <span class="slider-arrow-prev"></span>
+        </div>
+    </div><!-- swiper-button-prev end -->
+    <!-- swiper-pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- scroll-btn start -->
+    <a href="#down" class="scroll-btn pointer-large">
+        <div class="scroll-arrow-box">
+            <span class="scroll-arrow"></span>
+        </div>
+        <div class="scroll-btn-flip-box">
+            <span class="scroll-btn-flip" data-text="AŞAĞI">AŞAĞI</span>
+        </div>
+    </a><!-- scroll-btn end -->
+</section><!-- home-slider end -->
+<!-- flex-min-height-box start -->
+<section id="down" class="dark-bg-1 flex-min-height-box">
+    <!-- flex-min-height-inner start -->
+    <div class="flex-min-height-inner">
+        <!-- container start -->
+        <div class="container small top-bottom-padding-120">
+            <!-- flex-container start -->
+            <div data-animation-container="" class="flex-container">
+                <!-- column start -->
+                <div class="twelve-columns text-center">
+                    <h2 class="large-title text-height-12">
+                        <span data-animation-child="" class="title-fill" data-animation="title-fill-anim" data-text="FLOMAK KATOLOG">FLOMAK KATOLOG</span><br>
+                        <span data-animation-child="" class="title-fill tr-delay01" data-animation="title-fill-anim" data-text="HAKKINDA">HAKKINDA</span>
+                    </h2>
+                </div><!-- column end -->
+                <!-- column start -->
+                <div class="six-columns">
+                    <div class="content-right-margin-20">
+                        <p data-animation-child="" class="p-style-medium text-color-5 fade-anim-box tr-delay02" data-animation="fade-anim">Flomak 2003 yılında kurulmuş olup, modern çalışma yöntemini benimsemiş nitelikli personeliyle Tekstil ve Teknik Tekstil, Makine, Mobilya ve Ahşap sektörlerinde faaliyet gösteren, dünyanın dört bir köşesinden hizmet ve ürün transfer eden bir Mümessillik firmasıdır. Kullandığı malzeme ve ekipmanlarıyla kalitesini pozitif bir ivmeyle sürekli geliştirmiştir.</p>
+                    </div>
+                </div><!-- column end -->
+                <!-- column start -->
+                <div class="six-columns">
+                    <div class="content-left-margin-20">
+                        <p data-animation-child="" class="p-style-medium text-color-5 fade-anim-box tr-delay03" data-animation="fade-anim">Müşterilerinin ihtiyaçlarını kesintisiz anında tespit ederek, en iyi şekilde cevaplamak suretiyle, hizmet verdiği firmaların zaman ve enerjilerini asıl faaliyet alanlarına yöneltmelerine katkıda bulunmaktadır. </p>
+                    </div>
+                </div><!-- column end -->
+                <!-- column start -->
+                <div class="twelve-columns text-center">
+                    <a href="/Home/About">
+                        <p data-animation-child="" class="p-letter-style text-color-6 text-height-13 fade-anim-box tr-delay04" data-animation="fade-anim">DETAYLI BİLGİ İÇİN TİKLAYİN</p>
+                    </a>
+                </div><!-- column end -->
+            </div><!-- flex-container end -->
+        </div><!-- container end -->
+    </div><!-- flex-min-height-inner end -->
+</section>
+<!-- flex-min-height-box end -->
+<!-- section start -->
+<section class="light-bg-1 bottom-padding-30 top-padding-120" data-midnight="black">
+    <!-- container start -->
+    <div data-animation-container="" class="container small bottom-padding-60 text-center">
+        <h2 data-animation-child="" class="large-title text-height-10 text-color-1 overlay-anim-box2" data-animation="overlay-anim2">FLOMARK TEKSTİL</h2><br>
+        <p data-animation-child="" class="fade-anim-box tr-delay02 text-color-1 xsmall-title-oswald top-margin-5" data-animation="fade-anim">FLOMARK KATALOG</p>
+    </div><!-- container end -->
+    <!-- bottom-padding-90 start -->
+
+    @foreach (var item in Model.Sectors)
+    {
+
+
+        <div class="bottom-padding-90">
+            <!-- portfolio-content start -->
+            <div class="portfolio-content flex-min-height-box">
+                <!-- portfolio-content-inner start -->
+                <div class="portfolio-content-inner flex-min-height-inner">
+                    <!-- flex-container start -->
+                    <div class="flex-container container small">
+                        <!-- column start -->
+                        <div data-animation-container="" class="six-columns">
+                            <div class="content-right-margin-40">
+                                <span class="small-title-oswald red-color overlay-anim-box2" data-animation="overlay-anim2">@item.SectorName</span>
+                                <h3 class="title-style text-color-1">
+                                    <span data-animation-child="" class="overlay-anim-box2 overlay-dark-bg-2 tr-delay01" data-animation="overlay-anim2">@item.TextTitle</span><br>
+                                    @*<span data-animation-child="" class="overlay-anim-box2 overlay-dark-bg-2 tr-delay02" data-animation="overlay-anim2">pork belly lyft</span><br>*@
+                                    @*<span data-animation-child="" class="overlay-anim-box2 overlay-dark-bg-2 tr-delay03" data-animation="overlay-anim2">brooklyn messeng</span>*@
+                                </h3>
+                                <p data-animation-child="" class="p-style-small text-color-2 fade-anim-box tr-delay04" data-animation="fade-anim">@item.TextExplanation</p>
+
+                                <div data-animation-child="" class="arrow-btn-box top-margin-30 fade-anim-box tr-delay05" data-animation="fade-anim">
+                                    <a href="project.html" class="arrow-btn pointer-large animsition-link">DETAYLİ BİLGİ</a>
+                                </div>
+
+                            </div>
+                        </div><!-- column end -->
+                        <!-- column start -->
+                        <div class="six-columns top-padding-60">
+                            <a href="project.html" class="portfolio-content-bg-box pointer-large hover-box hidden-box animsition-link">
+                                <div class="portfolio-content-bg hover-img overlay-anim-box2 overlay-dark-bg-2" data-animation="overlay-anim2" style="background-image:url(@item.SectorImage)"></div>
+                            </a>
+                        </div><!-- column end -->
+                    </div><!-- flex-container end -->
+                </div><!-- portfolio-content-inner end -->
+            </div><!-- portfolio-content end -->
+        </div>
+
+
+
+
+    }
+
+
+
+    <!-- bottom-padding-90 end -->
+    <!-- bottom-padding-90 start -->
+
+</section>
+<!-- section end -->
+<!-- section start (REFERANSLAR) -->
+<section class="dark-bg-2">
+    <!-- container start -->
+    <div class="container small top-bottom-padding-120">
+        <!-- medium-title start -->
+        <h2 data-animation-container="" class="medium-title">
+            <span data-animation-child="" class="title-fill" data-animation="title-fill-anim" data-text="REFERANSLARIMIZ">REFERANSLARIMIZ</span><br>
+            @*<span data-animation-child="" class="title-fill tr-delay01" data-animation="title-fill-anim" data-text="We’ve Worked">We’ve Worked</span><br>
+                <span data-animation-child="" class="title-fill tr-delay02" data-animation="title-fill-anim" data-text="With">With</span>*@
+        </h2><!-- medium-title end -->
+        <!-- client-list start -->
+        <ul class="client-list d-flex-wrap top-padding-60">
+
+            @foreach (var reference in Model.References)
+            {
+
+                <li>
+                    <a href="#" class="pointer-large d-block">
+                        <div class="brand-box">
+                            <img src="/images/clients/@reference.Image" alt="Brand" class="hover-opac-img">
+                            @* <img src="/images/clients/1c4bfb0e-0b9f-4c19-ba5c-113fb0714514.png" alt="Brand" class="opac-img">*@
+                        </div>
+                    </a>
+                </li>
+            }
+
+
+        </ul><!-- client-list end -->
+    </div><!-- container end -->
+</section>
+<!-- section end  (REFERANSLAR) -->
+<!-- light-bg-2 start (Duyurular) -->
+<div class="light-bg-2 top-bottom-padding-120" data-midnight="black">
+    <!-- testimonials-slider start -->
+    <div class="testimonials-slider container small">
+        <!-- swiper-wrapper start -->
+        <div class="swiper-wrapper">
+            <!-- slide start -->
+            <!-- slide start -->
+            @foreach (var item in Model.News)
+            {
+
+                <div class="swiper-slide text-center">
+                    <img src="/images/testimonials/Users.png" alt="author">
+                    <div class="testimonials-content">
+                        <p class="text-color-4 p-style-bold">@item.Name</p>
+                    </div>
+                    <div class="text-color-1 small-title-oswald">
+                        @item.History <span class="text-color-2"></span>
+                    </div>
+
+                </div>
+            }
+        </div><!-- swiper-wrapper end -->
+        <!-- swiper-pagination -->
+        <div class="swiper-pagination"></div>
+    </div><!-- testimonials-slider end -->
+</div>
+<!-- light-bg-2 end -- (Duyurular)>
+
+
+
+
+
+
+
+
+
+
+<!-- video-content-bg start -->
+<div class="video-content-bg" style="background-image:url(/images/backgrounds/1.jpg)">
+    <div class="bg-overlay"></div>
+    <a href="https://www.youtube.com/watch?v=3LbBNq9wAsk" class="video-play-button popup-youtube pointer-large">
+        <span></span>
+    </a>
+</div>
+<!-- video-content-bg end -->
+<!-- latest-news start (Flomak Sektor)-->
+<section class="latest-news top-padding-120 bottom-padding-30 light-bg-1" data-midnight="black">
+    <!-- container start -->
+    <div class="container">
+        <!-- text-center start -->
+        <div data-animation-container="" class="text-center">
+            <h2 data-animation-child="" class="large-title text-height-10 text-color-1 overlay-anim-box2" data-animation="overlay-anim2">FLOMAK SEKTÖLERİ</h2><br>
+            <p data-animation-child="" class="fade-anim-box tr-delay02 text-color-1 xsmall-title-oswald top-margin-5" data-animation="fade-anim">FLOMAK SECTORS</p>
+        </div><!-- text-center end -->
+        <!-- flex-container start -->
+        <div class="flex-container response-999 top-padding-60">
+
+            <!-- column start -->
+            @foreach (var item in Model.FlomakSectors)
+            {
+
+
+                <div class="four-columns bottom-padding-90">
+                    <article class="content-right-margin-20 light-bg-2" data-animation-container="">
+                        <a href="single_post.html" class="pointer-large animsition-link hover-box d-block">
+                            <div class="overlay-anim-box2 overlay-dark-bg-2" data-animation="overlay-anim2">
+                                <img class="hover-img" src="/images/team/@item.Image" alt="blog img">
+                            </div>
+                            <h3 class="title-style text-color-1 top-margin-30 blog-title content-padding-l-r-20">
+                                <span data-animation-child="" class="overlay-anim-box2 hover-content overlay-dark-bg-2 tr-delay01" data-animation="overlay-anim2">@item.SectorName</span><br>
+                                @* <span data-animation-child="" class="overlay-anim-box2 hover-content overlay-dark-bg-2 tr-delay02" data-animation="overlay-anim2">brooklyn bun</span><br>*@
+                                @*  <span data-animation-child="" class="overlay-anim-box2 hover-content overlay-dark-bg-2 tr-delay03" data-animation="overlay-anim2">pickled bespoke</span>*@
+                            </h3>
+                        </a>
+                        <div class="content-padding-bottom-20 content-padding-l-r-20">
+                            <ul data-animation-child="" class="blog-category top-margin-30 fade-anim-box tr-delay04 text-color-2" data-animation="fade-anim">
+                                <li><i class="fas fa-thumbtack text-color-3"></i></li>
+                                <li class="p-letter-style pointer-small hover-color"><a href="#">@item.Label</a></li>
+                                <li class="p-letter-style pointer-small hover-color"><a href="#"></a></li>
+                                <li class="p-letter-style pointer-small hover-color"><a href="#"></a></li>
+                            </ul>
+                            <ul data-animation-child="" class="blog-tags top-margin-10 fade-anim-box tr-delay05 text-color-2" data-animation="fade-anim">
+                                <li><i class="fas fa-tags text-color-3"></i></li>
+                                <li class="p-letter-style pointer-small hover-color"><a href="#">@item.SectorCategory</a></li>
+                                <li class="p-letter-style pointer-small hover-color"><a href="#"></a></li>
+                            </ul>
+                            <div data-animation-child="" class="blog-autor-date top-margin-30 fade-anim-box tr-delay06 text-color-1" data-animation="fade-anim">
+                                <a class="xsmall-title-oswald pointer-small hover-color" href="#">@item.User</a>
+                                <a class="xsmall-title-oswald pointer-small hover-color" href="#">@item.History</a>
+                            </div>
+                        </div>
+                    </article>
+                </div><!-- column end -->
+            }
+
+        </div><!-- flex-container end -->
+    </div><!-- container end -->
+</section>
+<!-- latest-news end  (Flomak Sektor) -->
+</main>
+<!-- animsition-overlay end -->

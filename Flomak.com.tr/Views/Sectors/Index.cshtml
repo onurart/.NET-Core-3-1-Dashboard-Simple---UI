@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Flomak.com.tr.Models.Sector>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+
+<p>
+    <a asp-action="Create" class="btn btn-secondary card-danger">YENİ ALAN AÇ</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SectorName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TextTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TextExplanation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SectorImage)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SectorName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TextTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TextExplanation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SectorImage)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-primary card-danger">DÜZENLE</a> 
+                <a asp-action="Details" asp-route-id="@item.ID" class="btn btn-danger card-primary">DETAY</a> 
+                <a asp-action="Delete" asp-route-id="@item.ID" class="btn btn-warning card-danger">SİL</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
